@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FBCB931-505D-4820-8BFD-C6106ABDFB7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Library_Sys.My.MyApplication</StartupObject>
+    <RootNamespace>Library_Sys</RootNamespace>
+    <AssemblyName>Library_Sys</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Library_Sys.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Library_Sys.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_windows\login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="main_windows\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_windows\main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="main_windows\main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messages\delete.Designer.vb">
+      <DependentUpon>delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="messages\delete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messages\notfound.Designer.vb">
+      <DependentUpon>notfound.vb</DependentUpon>
+    </Compile>
+    <Compile Include="messages\notfound.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messages\saved.Designer.vb">
+      <DependentUpon>saved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="messages\saved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messages\search.Designer.vb">
+      <DependentUpon>search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="messages\search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messages\update.Designer.vb">
+      <DependentUpon>update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="messages\update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="reports\academic_booking_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>academic_booking_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\book_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>book_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\cust_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cust_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\emp_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>emp_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\lib_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lib_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\vend_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vend_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_forms\academic_booking.Designer.vb">
+      <DependentUpon>academic_booking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports_forms\academic_booking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports_forms\books_report.Designer.vb">
+      <DependentUpon>books_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports_forms\books_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports_forms\customers_report.Designer.vb">
+      <DependentUpon>customers_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports_forms\customers_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports_forms\emp_admin.Designer.vb">
+      <DependentUpon>emp_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports_forms\emp_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports_forms\library_branches.Designer.vb">
+      <DependentUpon>library_branches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports_forms\library_branches.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports_forms\vendors_report.Designer.vb">
+      <DependentUpon>vendors_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports_forms\vendors_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retreving.vb" />
+    <Compile Include="variables.vb" />
+    <Compile Include="windows_forms\absence.Designer.vb">
+      <DependentUpon>absence.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\absence.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\academic_booking_form.Designer.vb">
+      <DependentUpon>academic_booking_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\academic_booking_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\accounts.Designer.vb">
+      <DependentUpon>accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\accounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\add_library.Designer.vb">
+      <DependentUpon>add_library.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\add_library.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\all_absence_employees.Designer.vb">
+      <DependentUpon>all_absence_employees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\all_absence_employees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\attendance.Designer.vb">
+      <DependentUpon>attendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\attendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\bookscopy_add.Designer.vb">
+      <DependentUpon>bookscopy_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\bookscopy_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\books_add.Designer.vb">
+      <DependentUpon>books_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\books_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\books_sending_binding.Designer.vb">
+      <DependentUpon>books_sending_binding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\books_sending_binding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\customers.Designer.vb">
+      <DependentUpon>customers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\customers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\employees_administration.Designer.vb">
+      <DependentUpon>employees_administration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\employees_administration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\forigen_metaphor.Designer.vb">
+      <DependentUpon>forigen_metaphor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\forigen_metaphor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\full_books_add.Designer.vb">
+      <DependentUpon>full_books_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\full_books_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\internal_metaphor.Designer.vb">
+      <DependentUpon>internal_metaphor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\internal_metaphor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\lost_books.Designer.vb">
+      <DependentUpon>lost_books.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\lost_books.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\messages_add.Designer.vb">
+      <DependentUpon>messages_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\messages_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\month_inventory.Designer.vb">
+      <DependentUpon>month_inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\month_inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\order_books_char.Designer.vb">
+      <DependentUpon>order_books_char.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\order_books_char.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\order_books_date.Designer.vb">
+      <DependentUpon>order_books_date.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\order_books_date.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\order_books_num.Designer.vb">
+      <DependentUpon>order_books_num.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\order_books_num.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\researchs_add.Designer.vb">
+      <DependentUpon>researchs_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\researchs_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\reserve_group_book.Designer.vb">
+      <DependentUpon>reserve_group_book.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\reserve_group_book.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\return_books.Designer.vb">
+      <DependentUpon>return_books.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\return_books.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\return_metaphor_books.Designer.vb">
+      <DependentUpon>return_metaphor_books.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\return_metaphor_books.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\sendig_books_library.Designer.vb">
+      <DependentUpon>sendig_books_library.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\sendig_books_library.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\store_buy.Designer.vb">
+      <DependentUpon>store_buy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\store_buy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\store_sales.Designer.vb">
+      <DependentUpon>store_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\store_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\system_administration.Designer.vb">
+      <DependentUpon>system_administration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\system_administration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\vendors.Designer.vb">
+      <DependentUpon>vendors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\vendors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows_forms\year_inventory.Designer.vb">
+      <DependentUpon>year_inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="windows_forms\year_inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_windows\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_windows\main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messages\delete.resx">
+      <DependentUpon>delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messages\notfound.resx">
+      <DependentUpon>notfound.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messages\saved.resx">
+      <DependentUpon>saved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messages\search.resx">
+      <DependentUpon>search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messages\update.resx">
+      <DependentUpon>update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\academic_booking_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>academic_booking_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\book_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>book_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\cust_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cust_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\emp_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>emp_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\lib_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lib_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\vend_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>vend_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_forms\academic_booking.resx">
+      <DependentUpon>academic_booking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_forms\books_report.resx">
+      <DependentUpon>books_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_forms\customers_report.resx">
+      <DependentUpon>customers_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_forms\emp_admin.resx">
+      <DependentUpon>emp_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_forms\library_branches.resx">
+      <DependentUpon>library_branches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_forms\vendors_report.resx">
+      <DependentUpon>vendors_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\absence.resx">
+      <DependentUpon>absence.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\academic_booking_form.resx">
+      <DependentUpon>academic_booking_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\accounts.resx">
+      <DependentUpon>accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\add_library.resx">
+      <DependentUpon>add_library.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\all_absence_employees.resx">
+      <DependentUpon>all_absence_employees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\attendance.resx">
+      <DependentUpon>attendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\bookscopy_add.resx">
+      <DependentUpon>bookscopy_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\books_add.resx">
+      <DependentUpon>books_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\books_sending_binding.resx">
+      <DependentUpon>books_sending_binding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\customers.resx">
+      <DependentUpon>customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\employees_administration.resx">
+      <DependentUpon>employees_administration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\forigen_metaphor.resx">
+      <DependentUpon>forigen_metaphor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\full_books_add.resx">
+      <DependentUpon>full_books_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\internal_metaphor.resx">
+      <DependentUpon>internal_metaphor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\lost_books.resx">
+      <DependentUpon>lost_books.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\messages_add.resx">
+      <DependentUpon>messages_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\month_inventory.resx">
+      <DependentUpon>month_inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\order_books_char.resx">
+      <DependentUpon>order_books_char.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\order_books_date.resx">
+      <DependentUpon>order_books_date.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\order_books_num.resx">
+      <DependentUpon>order_books_num.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\researchs_add.resx">
+      <DependentUpon>researchs_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\reserve_group_book.resx">
+      <DependentUpon>reserve_group_book.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\return_books.resx">
+      <DependentUpon>return_books.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\return_metaphor_books.resx">
+      <DependentUpon>return_metaphor_books.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\sendig_books_library.resx">
+      <DependentUpon>sendig_books_library.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\store_buy.resx">
+      <DependentUpon>store_buy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\store_sales.resx">
+      <DependentUpon>store_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\system_administration.resx">
+      <DependentUpon>system_administration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\vendors.resx">
+      <DependentUpon>vendors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows_forms\year_inventory.resx">
+      <DependentUpon>year_inventory.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
